@@ -1,6 +1,6 @@
 var express = require('express');
 
-var port = process.env.port || 3000;
+var PORT  = process.env.port || 3000;
 const bodyParser=require('body-parser');
 const path=require('path');
 const app=express();
@@ -57,4 +57,4 @@ app.get("*",(req,res)=>{
 });
 
 
-app.listen(port,()=>console.log("listening on port 3000..."));
+app.listen(PORT,()=>console.log("listening on port 3000..."));
