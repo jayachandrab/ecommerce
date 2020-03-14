@@ -9,7 +9,7 @@ const config=require('./config');
 const Product = require('./models/products');
 var Order=require('./models/order');
 mongoose.Promise = global.Promise;
-mongoose.connect(config.mongoURL,{useNewUrlParser:true});
+mongoose.connect(config.mongoURL,{useNewUrlParser:true, useUnifiedTopology: true });
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,'../dist')));
 
