@@ -1,4 +1,5 @@
 var express = require('express');
+var port = proess.env.PORT || 3000;
 const bodyParser=require('body-parser');
 const path=require('path');
 const app=express();
@@ -55,4 +56,4 @@ app.get("*",(req,res)=>{
 });
 
 
-app.listen(3000,()=>console.log("listening on port 3000..."));
+app.listen(port,()=>console.log("listening on port 3000..."));
